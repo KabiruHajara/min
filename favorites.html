@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe_Favorites</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body>
+    <section class="shadow-xl">
+        <header class="flex flex-row px-15">
+            <nav class="flex flex-row justify-between bg-white  py-4 px-5 w-full border-b border-b-gray-50">
+                <div class="flex flex-row gap-3">
+                    <div class="bg-gradient-to-r from-indigo-800 to-purple-900 p-5 rounded-xl">
+                        <img src="" alt="">
+                    </div>
+                    <div class="text-purple-700 font-bold text-2xl">
+                        <h1>Luxe Store</h1>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-5 font-semibold">
+                    <div class="hover:text-purple-900">
+                        <a href="./homepage.html">Products</a>
+                    </div>
+                    <div class="hover:text-purple-900">
+                        <a href="./Categories.html">Categories</a>
+                    </div>
+                    <div class="hover:text-purple-900">
+                        <img src="" alt="">
+                        <a href="./Favorites.html">Favorites</a>
+                    </div>
+                    <div class="hover:text-purple-900">
+                        <img src="" alt="">
+                        <a href="./Cart.html">Cart</a>
+                    </div>
+                </div>
+            </div>
+            </nav>
+        </header>
+    </section>
+    <section class="py-16 bg-gradient-to-r from-red-500 to-pink-600">
+        <div class="flex flex-col text-center gap-5 text-white">
+            <div>
+                <img src="" alt="">
+            </div>
+            <div class="text-5xl font-bold ">
+                <h1 class="mb-6 floating">Your Favorites</h1>
+            </div>
+            <div class="text-xl mb-8 max-w-2xl mx-auto">
+                <h1>All the products you love, saved in one place</h1>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray-100 px-30">
+            <div class="flex flex-row text-center justify-between p-5">
+                <div class="text-3xl font-bold">
+                    <h1>Wishlist Items</h1>
+                </div>
+                <div class="flex flex-row">
+                    <img src="" alt="">
+                    <h2>Saved for Later</h2>
+                    <div class="bg-red-100 hover:bg-red-200 text-red-600 py-1 px-3 rounded-xl">
+                        <button class="text-s">Clear All</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="bg-gray-100 py-30 ">
+        <div class="flex flex-col items-center text-center gap-5">
+            <div class="bg-red-100 h-20 w-20 rounded-full">
+                <img src="" alt="">
+            </div>
+            <div>
+                <h1 class="font-semibold text-xl">No Favorites yet</h1>
+                <p class="w-90">Start adding products to your favorites by clicking the heart icon on any product</p>
+            </div>
+            <div class="bg-red-500 text-white py-3 px-5 rounded-xl">
+                <img src="" alt="">
+                <button>Browse Products</button>
+            </div>
+        </div>
+    </section>
+    <section class="px-30 py-15">
+        <div class="flex flex-col gap-7">
+            <div class="text-center">
+                <h1 class="font-bold text-xl">You Might Also Love</h1>
+                <h4>Based on your favorites, here are some recommendations</h4>
+            </div>
+            <div class="flex flex-row justify-around">
+            <div class="flex flex-col items-center gap-2">
+                <div class="bg-red-100 rounded-full h-15 w-15 p-5">
+                    <img src="" alt="">
+                </div>
+                <div class="flex flex-col text-center">
+                    <h2 class="font-semibold">Save for Later</h2>
+                    <h6 class="text-sm">Keep track of items you love</h6>
+                </div>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <div class="bg-blue-100 rounded-full h-15 w-15 p-5">
+                    <img src="" alt="">
+                </div>
+                <div class="flex flex-col text-center">
+                    <h2 class="font-semibold">Price Alerts</h2>
+                    <h6 class="text-sm">Get notified when prices drop</h6>
+                </div>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <div class="bg-green-100 rounded-full h-15 w-15 p-5">
+                    <img src="" alt="">
+                </div>
+                <div class="flex flex-col text-center">
+                    <h2 class="font-semibold">Share Lists</h2>
+                    <h6 class="text-sm">Share your wishlist with friends</h6>
+                </div>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <div class="bg-purple-100 rounded-full h-15 w-15 p-5">
+                    <img src="" alt="">
+                </div>
+                <div class="flex flex-col text-center">
+                    <h2 class="font-semibold">Smart Suggestions</h2>
+                    <h6 class="text-sm">Discover similar products</h6>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="./script.js"></script>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                loadFavorites();
+                updateCartCount();
+                updateFavCount();
+            }, 1000);
+        })
+    </script>
+</body>
+</html>
