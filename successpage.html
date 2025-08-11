@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Success - Luxe Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .pulse-ring { animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+        @keyframes pulse-ring { 0% { transform: scale(0.33); } 40%, 50% { opacity: 0; } 100% { opacity: 0; transform: scale(1.33); } }
+        .success-animation { animation: successPulse 2s ease-in-out infinite; }
+        @keyframes successPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+        .confetti { animation: confetti 3s ease-in-out infinite; }
+        @keyframes confetti { 0%, 100% { transform: translateY(0) rotate(0deg); } 25% { transform: translateY(-10px) rotate(5deg); } 75% { transform: translateY(-5px) rotate(-5deg); } }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Premium Navigation -->
+    <nav class="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center">
+                        <i class="fas fa-gem text-white text-lg"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                        Luxe Store
+                    </h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">Products</a>
+                    <a href="categories.html" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">Categories</a>
+                    <a href="favorites.html" class="relative text-gray-700 hover:text-purple-600 font-medium transition-colors">
+                        <i class="fas fa-heart mr-1"></i> Favorites
+                        <span id="favCount" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </a>
+                    <a href="cart.html" class="relative text-gray-700 hover:text-purple-600 font-medium transition-colors">
+                        <i class="fas fa-shopping-bag mr-1"></i> Cart
+                        <span id="cartCount" class="absolute -top-2 -right-2 bg-purple-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center pulse-ring">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Success Hero -->
+    <div class="bg-gradient-to-r from-green-400 to-green-600 text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10"></div>
+        <!-- Confetti Elements -->
+        <div class="absolute top-10 left-10 confetti">
+            <i class="fas fa-star text-yellow-300 text-2xl"></i>
+        </div>
+        <div class="absolute top-20 right-20 confetti" style="animation-delay: 0.5s;">
+            <i class="fas fa-heart text-red-300 text-xl"></i>
+        </div>
+        <div class="absolute top-32 left-1/4 confetti" style="animation-delay: 1s;">
+            <i class="fas fa-gem text-purple-300 text-lg"></i>
+        </div>
+        <div class="absolute top-16 right-1/3 confetti" style="animation-delay: 1.5s;">
+            <i class="fas fa-star text-yellow-300 text-xl"></i>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="success-animation mb-8">
+                <div class="w-32 h-32 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-check text-white text-6xl"></i>
+                </div>
+            </div>
+            <h2 class="text-6xl md:text-7xl font-bold mb-6">
+                Order Successful!
+            </h2>
+            <p class="text-2xl text-white/90 mb-4">
+                Thank you for your purchase! 🎉
+            </p>
+            <p class="text-lg text-white/80 max-w-2xl mx-auto">
+                Your order has been confirmed and will be shipped within 24 hours
+            </p>
+        </div>
+    </div>
+
+    <!-- Success Details -->
+    <div class="container mx-auto px-6 py-16">
+        <div class="max-w-4xl mx-auto">
+            <!-- Order Confirmation Card -->
+            <div class="bg-white rounded-3xl shadow-2xl p-8 mb-12">
+                <div class="text-center mb-8">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-receipt text-green-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-2">Order Confirmed</h3>
+                    <p class="text-gray-600 text-lg">Order #LX100B</p>
+                </div>
+
+                <!-- Order Timeline -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-check text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">Order Placed</h4>
+                        <p class="text-sm text-gray-600">Just now</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-box text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">Processing</h4>
+                        <p class="text-sm text-gray-600">Within 2 hours</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-truck text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">Shipped</h4>
+                        <p class="text-sm text-gray-600">Within 24 hours</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-home text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">Delivered</h4>
+                        <p class="text-sm text-gray-600">2-3 business days</p>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="index.html" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 px-6 rounded-2xl font-semibold hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg text-center">
+                        <i class="fas fa-shopping-bag mr-2"></i>Continue Shopping
+                    </a>
+                    <button onclick="trackOrder()" class="bg-gray-200 text-gray-800 py-4 px-6 rounded-2xl font-semibold hover:bg-gray-300 transition-colors">
+                        <i class="fas fa-search mr-2"></i>Track Order
+                    </button>
+                    <button onclick="shareSuccess()" class="bg-green-500 text-white py-4 px-6 rounded-2xl font-semibold hover:bg-green-600 transition-colors">
+                        <i class="fas fa-share mr-2"></i>Share
+                    </button>
+                </div>
+            </div>
+
+            <!-- What's Next Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Email Confirmation -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800">Email Confirmation</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        We've sent a confirmation email with your order details and tracking information.
+                    </p>
+                    <div class="bg-blue-50 p-4 rounded-xl">
+                        <p class="text-blue-800 text-sm">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            Check your spam folder if you don't see it in your inbox
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Customer Support -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-headset text-purple-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800">Need Help?</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Our customer support team is here to help with any questions about your order.
+                    </p>
+                    <div class="space-y-2">
+                        <button class="w-full bg-purple-100 text-purple-800 py-2 px-4 rounded-lg hover:bg-purple-200 transition-colors text-left">
+                            <i class="fas fa-comments mr-2"></i>Live Chat
+                        </button>
+                        <button class="w-full bg-purple-100 text-purple-800 py-2 px-4 rounded-lg hover:bg-purple-200 transition-colors text-left">
+                            <i class="fas fa-phone mr-2"></i>Call Support
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Offers -->
+            <div class="mt-12 bg-gradient-to-r from-orange-400 to-pink-500 text-white p-8 rounded-2xl">
+                <div class="text-center">
+                    <h3 class="text-3xl font-bold mb-4">🎁 Special Thank You Offer!</h3>
+                    <p class="text-xl mb-6">Get 20% off your next purchase as a thank you for being an amazing customer</p>
+                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 inline-block mb-6">
+                        <p class="text-2xl font-bold">THANKYOU20</p>
+                        <p class="text-sm">Valid for 30 days</p>
+                    </div>
+                    <div>
+                        <button onclick="copyPromoCode()" class="bg-white text-orange-600 px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors mr-4">
+                            <i class="fas fa-copy mr-2"></i>Copy Code
+                        </button>
+                        <a href="index.html" class="bg-orange-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-orange-700 transition-colors">
+                            <i class="fas fa-shopping-bag mr-2"></i>Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Update counts when page loads
+        window.addEventListener('load', function() {
+            updateCartCount();
+            updateFavCount();
+        });
+
+        // Track order function
+        function trackOrder() {
+            showNotification('📦 Tracking information will be sent to your email!', 'info')
+        }
+
+        // Share success function
+        function shareSuccess() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'I just made a purchase at Luxe Store!',
+                    text: 'Check out this amazing store with premium products!',
+                    url: window.location.origin
+                })
+            } else {
+                showNotification('🎉 Thanks for wanting to share!', 'success')
+            }
+        }
+
+        // Copy promo code function
+        function copyPromoCode() {
+            navigator.clipboard.writeText('THANKYOU20')
+            showNotification('📋 Promo code copied! THANKYOU20', 'success')
+        }
+    </script>
+</body>
+</html>
