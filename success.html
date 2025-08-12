@@ -20,32 +20,32 @@
 </head>
 <body class="bg-gray-50">
     <!-- Premium Navigation -->
-    <nav class="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-100">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-4">
-                    <div class="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center">
+    <section class="shadow-xl">
+        <header class="flex flex-row px-15">
+            <nav class="flex flex-row justify-between bg-white py-4 px-5 w-full border-b border-b-gray-50">
+                <div class="flex flex-row gap-3">
+                    <div class="bg-gradient-to-r from-indigo-800 to-purple-900 rounded-xl h-10 w-10 flex items-center justify-center">
                         <i class="fas fa-gem text-white text-lg"></i>
                     </div>
-                    <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                        Luxe Store
-                    </h1>
+                        <h1 class=" bg-gradient-to-r from-purple-600 to-blue-600 text-2xl font-bold bg-clip-text text-transparent">Luxe Store</h1>
+                    </div>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">Products</a>
-                    <a href="categories.html" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">Categories</a>
-                    <a href="favorites.html" class="relative text-gray-700 hover:text-purple-600 font-medium transition-colors">
-                        <i class="fas fa-heart mr-1"></i> Favorites
-                        <span id="favCount" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
-                    </a>
-                    <a href="cart.html" class="relative text-gray-700 hover:text-purple-600 font-medium transition-colors">
-                        <i class="fas fa-shopping-bag mr-1"></i> Cart
-                        <span id="cartCount" class="absolute -top-2 -right-2 bg-purple-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center pulse-ring">0</span>
-                    </a>
+                <div class="flex flex-row gap-5 font-semibold">
+                        <a href="./index.html" class=" hover:text-purple-600 font-medium ">Products</a>
+                        <a href="./categories.html" class=" hover:text-purple-600 font-medium ">Categories</a>
+                        <a href="./favorite.html" class="relative hover:text-purple-600 font-medium ">
+                            <i class="fas fa-heart mr-1"></i>Favorites
+                            <span id="favCount" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                        </a>
+                        <a href="./cart.html"  class="relative text-gray-700 hover:text-purple-600 font-medium transition-colors">
+                            <i class="fas fa-shopping-bag mr-1"></i>Cart
+                            <span id="cartCount" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                        </a>
                 </div>
             </div>
-        </div>
-    </nav>
+            </nav>
+        </header>
+    </section>
 
     <!-- Success Hero -->
     <div class="bg-gradient-to-r from-green-400 to-green-600 text-white py-20 relative overflow-hidden">
